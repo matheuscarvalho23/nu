@@ -32,6 +32,16 @@ export const CardHeader = styled.View`
   padding: 30px;
 `;
 
+export const CardHeaderIcon = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+// export const CardHeaderBalanceClose = styled.TouchableOpacity``;
+
+// export const CardHeaderBalanceshow = styled.TouchableOpacity``;
+
 export const CardContent = styled.View`
   flex: 1;
   padding: 0 30px;
@@ -39,13 +49,13 @@ export const CardContent = styled.View`
 `;
 
 export const Title = styled.Text`
-  font-size: 13px;
+  font-size: 15px;
   color: #999;
 `;
 
 export const Description = styled.Text`
   font-size: 32px;
-  margin-top: 30px;
+  margin-top: 10px;
   color: #333;
 `;
 
@@ -53,9 +63,17 @@ export const CardFooter = styled.View`
   padding: 30px;
   background: #eee;
   border-radius: 4px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const Annotation = styled.Text`
   font-size: 12px;
   color: #333;
+  margin-left: 15px;
+`;
+
+export const AnnotationIcon = styled.Text`
+  /* flex: 1; */
 `;

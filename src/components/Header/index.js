@@ -12,7 +12,7 @@ export default function Header() {
         <Logo source={logo} />
         <Title>Matheus</Title>
       </Top>
-      <Icon name="arrow-down" size={20} color="#A0A0A0" />
+      <Icon name="arrow-down" size={12} color="#A0A0A0" />
     </Container>
   );
 }

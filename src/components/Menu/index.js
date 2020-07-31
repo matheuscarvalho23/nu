@@ -12,11 +12,18 @@ import {
   NavText,
   SignOutButton,
   SignOutButtonText,
+  NavItemIcon,
 } from './style';
 
-export default function Menu() {
+export default function Menu({translateY}) {
   return (
-    <Container>
+    <Container
+      style={{
+        opacity: translateY.interpolate({
+          inputRange: [0, 150],
+          outputRange: [0, 1],
+        }),
+      }}>
       <Code>
         <QRCode
           value="http://www.facebook.com.br/matheus.h.carvalho"
@@ -27,24 +34,36 @@ export default function Menu() {
       </Code>
 
       <Nav>
-        <NavItem>
-          <Icon name="question" size={20} color="#fff" />
-          <NavText>Me ajuda</NavText>
+        <NavItem onPress={() => {}}>
+          <NavItemIcon>
+            <Icon name="question" size={20} color="#fff" />
+            <NavText>Me ajuda</NavText>
+          </NavItemIcon>
+          <Icon name="arrow-right" size={10} color="#fff" />
         </NavItem>
 
-        <NavItem>
-          <Icon name="user" size={20} color="#fff" />
-          <NavText>Perfil</NavText>
+        <NavItem onPress={() => {}}>
+          <NavItemIcon>
+            <Icon name="user" size={20} color="#fff" />
+            <NavText>Perfil</NavText>
+          </NavItemIcon>
+          <Icon name="arrow-right" size={10} color="#fff" />
         </NavItem>
 
-        <NavItem>
-          <Icon name="screen-smartphone" size={20} color="#fff" />
-          <NavText>Configurações do app</NavText>
+        <NavItem onPress={() => {}}>
+          <NavItemIcon>
+            <Icon name="screen-smartphone" size={20} color="#fff" />
+            <NavText>Configurações do app</NavText>
+          </NavItemIcon>
+          <Icon name="arrow-right" size={10} color="#fff" />
         </NavItem>
 
-        <NavItem>
-          <Icon name="home" size={20} color="#fff" />
-          <NavText>Pedir conta PJ</NavText>
+        <NavItem onPress={() => {}}>
+          <NavItemIcon>
+            <Icon name="home" size={20} color="#fff" />
+            <NavText>Pedir conta PJ</NavText>
+          </NavItemIcon>
+          <Icon name="arrow-right" size={10} color="#fff" />
         </NavItem>
       </Nav>
 
