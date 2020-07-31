@@ -38,9 +38,12 @@ export const CardHeaderIcon = styled.View`
   align-items: center;
 `;
 
-// export const CardHeaderBalanceClose = styled.TouchableOpacity``;
-
-// export const CardHeaderBalanceshow = styled.TouchableOpacity``;
+export const BalanceHide = styled.View`
+  width: 210px;
+  height: 43px;
+  background: #f1f1f1;
+  margin-top: 10px;
+`;
 
 export const CardContent = styled.View`
   flex: 1;

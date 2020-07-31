@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import {Animated} from 'react-native';
@@ -19,6 +19,7 @@ import {
   Annotation,
   AnnotationIcon,
   CardHeaderIcon,
+  BalanceHide,
 } from './style';
 
 export default function Main() {
@@ -63,6 +64,8 @@ export default function Main() {
     }
   }
 
+  const [state, setState] = useState(false);
+
   return (
     <Container>
       <Header />
@@ -90,12 +93,30 @@ export default function Main() {
                 <Icon name="attach-money" size={26} color="#777" />
                 <Title>Conta</Title>
               </CardHeaderIcon>
-              <Icon name="visibility-off" size={26} color="#777" />
+              {state ? (
+                <Icon
+                  name="visibility-off"
+                  size={26}
+                  color="#777"
+                  onPress={() => setState(false)}
+                />
+              ) : (
+                <Icon
+                  name="visibility"
+                  size={26}
+                  color="#777"
+                  onPress={() => setState(true)}
+                />
+              )}
             </CardHeader>
 
             <CardContent>
               <Title>Saldo dispoinível</Title>
-              <Description>R$ 568.968,78</Description>
+              {state ? (
+                <Description>R$ 568.968,78</Description>
+              ) : (
+                <BalanceHide />
+              )}
             </CardContent>
 
             <CardFooter>
